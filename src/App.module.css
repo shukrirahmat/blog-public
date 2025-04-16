@@ -59,6 +59,7 @@
 .navbtnContainer button:hover{
     background-color: white;
     color: dodgerblue;
+    cursor: pointer;
 }
 
 .navbtnContainer p {
