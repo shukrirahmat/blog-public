@@ -19,8 +19,13 @@
 }
 
 @font-face {
-    font-family: "Playfair Display BoldItalic";
-    src: url(assets/fonts/PlayfairDisplay-BoldItalic.ttf);
+  font-family: "Lora Bold";
+  src: url(assets/fonts/Lora-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Lora BoldItalic";
+  src: url(assets/fonts/Lora-BoldItalic.ttf);
 }
 
 * {
