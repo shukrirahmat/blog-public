@@ -108,8 +108,12 @@ const SignUp = () => {
     }
   };
 
+  if (userLoggedIn === null) {
+    return <div></div>
+  }
+
   if (userLoggedIn) {
-    return <Navigate to="/" />;
+    return <Navigate to="/"/>
   }
 
   if (isFinished) {

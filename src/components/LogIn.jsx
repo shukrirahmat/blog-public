@@ -77,6 +77,10 @@ const LogIn = () => {
     }
   };
 
+  if (userLoggedIn === null) {
+    return <div></div>
+  }
+
   if (userLoggedIn) {
     return <Navigate to="/"/>
   }
