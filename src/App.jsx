@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import fetchURL from "./fetchURL.jsx";
 import styles from "./App.module.css";
 
+const AUTHOR_SITE_URL = "https://shkrrhmtblogauthor.netlify.app/"
+
 function App() {
   const navigate = useNavigate();
 
@@ -60,7 +62,7 @@ function App() {
         </Link>
         <div className={styles.navbtnContainer}>
           {userLoggedIn && !isLoading && <p>Hello, {userName}</p>}
-          {userLoggedIn && !isLoading && isAuthor && <button>AUTHOR PAGE</button>}
+          {userLoggedIn && !isLoading && isAuthor && <a href={AUTHOR_SITE_URL}>AUTHOR PAGE</a>}
           {!userLoggedIn && !isLoading && <Link to="/log-in">LOG IN</Link>}
           {!userLoggedIn && !isLoading && <Link to="/sign-up">SIGN UP</Link>}
           {userLoggedIn && !isLoading && (
