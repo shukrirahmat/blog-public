@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import fetchURL from "./fetchURL.jsx";
 import styles from "./App.module.css";
 
-const AUTHOR_SITE_URL = "https://shkrrhmtblogauthor.netlify.app/"
+import AUTHOR_SITE_URL from "./authorSiteURL.jsx";
 
 function App() {
   const navigate = useNavigate();
