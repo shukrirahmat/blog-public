@@ -9,6 +9,7 @@ function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [userName, setUserName] = useState(null);
+  const [isAuthor, setIsAuthor] = useState(null);
 
   const toggleLogIn = (state) => {
     setUserLoggedIn(state);
@@ -39,6 +40,7 @@ function App() {
         })
         .then((data) => {
           setUserName(data.username);
+          setIsAuthor(data.isAuthor);
           toggleLogIn(true);
           setIsLoading(false);
         })
@@ -58,6 +60,7 @@ function App() {
         </Link>
         <div className={styles.navbtnContainer}>
           {userLoggedIn && !isLoading && <p>Hello, {userName}</p>}
+          {userLoggedIn && !isLoading && isAuthor && <button>AUTHOR PAGE</button>}
           {!userLoggedIn && !isLoading && <Link to="/log-in">LOG IN</Link>}
           {!userLoggedIn && !isLoading && <Link to="/sign-up">SIGN UP</Link>}
           {userLoggedIn && !isLoading && (

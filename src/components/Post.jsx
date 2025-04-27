@@ -8,6 +8,7 @@ import {
 import fetchURL from "../fetchURL";
 import { format } from "date-fns";
 import styles from "../styles/Post.module.css";
+import { AUTHOR_PROMPT_POSTID, AUTHOR_PROMPT_MESSAGE } from "../authorPrompt";
 
 const Post = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,24 @@ const Post = () => {
   const handleComment = (e) => {
     setCommentText(e.target.value);
   };
+
+  const becomeAnAuthor = () => {
+    const token = window.localStorage.getItem("token");
+    if (token) {
+      fetch(fetchURL + "/user/beAuthor/", {
+        mode: "cors",
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }).then((response) => {
+        if (response.ok) return response.json();
+        else throw new Error("Something went wrong");
+      }).then((data) => {
+        navigate(0);
+      }).catch((err) => {console.log(err)});
+    }
+  }
 
   const submitComment = (e) => {
     e.preventDefault();
@@ -63,6 +82,10 @@ const Post = () => {
             setComments(newComments);
             setIsAddingComment(false);
             setCommentText("");
+
+            if (data.content === AUTHOR_PROMPT_MESSAGE && data.postId === AUTHOR_PROMPT_POSTID) {
+              becomeAnAuthor();
+            }
           })
           .catch((err) => {
             if (err.message === "Unverified") {
