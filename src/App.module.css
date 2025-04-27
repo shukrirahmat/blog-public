@@ -1,78 +1,82 @@
 .app {
-    padding: 10px 40px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  padding: 10px 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    border-bottom: 2px solid darkcyan;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 2px solid darkcyan;
 }
 
 .logo {
-    text-decoration: none;
-    font-family: "DM Serif Text", serif;
-    color: darkcyan;
-    font-size: 35px;
+  text-decoration: none;
+  font-family: "DM Serif Text", serif;
+  color: darkcyan;
+  font-size: 35px;
 }
 
 .navbtnContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    font-family: "DM Sans Bold", sans-serif;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font-family: "DM Sans Bold", sans-serif;
+  padding: 20px;
 }
 
 .navbtnContainer * {
-    color: darkcyan;
-    text-decoration: none;
-    font-size: 18px;
+  color: darkcyan;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .navbtnContainer a {
-    padding: 5px 15px;
-    border-radius: 5px;
-    background-color: inherit;
-    color:darkcyan;
-    border: solid 1px darkcyan;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: inherit;
+  color: darkcyan;
+  border: solid 1px darkcyan;
 }
 
-.navbtnContainer a:hover{
-    background-color: darkcyan;
-    color: white;
+.navbtnContainer a:hover {
+  background-color: darkcyan;
+  color: white;
 }
 
 .navbtnContainer button {
-    padding: 5px 15px;
-    border-radius: 5px;
-    border: 1px solid darkcyan;
-    background-color: inherit;
-    font-family: "DM Sans Bold", sans-serif;
-    color: darkcyan;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid darkcyan;
+  background-color: inherit;
+  font-family: "DM Sans Bold", sans-serif;
+  color: darkcyan;
 }
 
-.navbtnContainer button:hover{
-    background-color: darkcyan;
-    color: white;
-    cursor: pointer;
+.navbtnContainer button:hover {
+  background-color: darkcyan;
+  color: white;
+  cursor: pointer;
 }
 
 .navbtnContainer p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .footer {
-    font-family: "DM Sans Bold", sans-serif;
-    color: darkcyan;
-    text-align: center;
-    margin-top: auto;
-    border-top: 2px solid darkcyan;
+  font-family: "DM Sans Bold", sans-serif;
+  color: darkcyan;
+  text-align: center;
+  margin-top: auto;
+  border-top: 2px solid darkcyan;
+}
+
+p {
+  white-space: pre-wrap;
 }
